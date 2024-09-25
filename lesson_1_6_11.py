@@ -7,13 +7,13 @@ try:
     browser = webdriver.Chrome()
     browser.get(link)
 
-    FirstName = browser.find_element(By.CSS_SELECTOR, 'input.form-control.first[placeholder="Input your first name"]')
+    FirstName = browser.find_element(By.CSS_SELECTOR, 'input.first:required')
     FirstName.send_keys("Andruxa")
 
-    SecondName = browser.find_element(By.CSS_SELECTOR, 'input.form-control.second[placeholder="Input your last name"]')
+    SecondName = browser.find_element(By.CSS_SELECTOR, 'input.second:required')
     SecondName.send_keys("Solo")
 
-    Email = browser.find_element(By.CSS_SELECTOR, 'input.form-control.third[placeholder="Input your email"]')
+    Email = browser.find_element(By.CSS_SELECTOR, 'input.third:required')
     Email.send_keys("111@andrey.test")
 
     # Отправляем заполненную форму
